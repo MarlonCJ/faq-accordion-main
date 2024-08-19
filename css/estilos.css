@@ -1,0 +1,139 @@
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+    --morado-claro: #ad28eb;
+    --font-1:(https://fonts.google.com/specimen/Work+Sans);
+}    
+
+@font-face {
+    font-family: 'WorkSans-Bold';
+    src: url('../assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('../assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: regular;
+  }
+  
+  @font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url('../assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: semibold;
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'WorkSans-Regular';
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 100vh;
+    background-color: var(--light-pink);
+
+}
+
+
+.fondo{
+    width: 100%;
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.faq{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: auto;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    font-family: var(--font-1);
+}
+
+.faq-title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 35px;
+    font-family: WorkSans-Bold;
+}
+
+.faq-title img{
+    width: 30px;
+    height: 30px;
+}
+
+.faq-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 5px 0;
+    background-color: var(--white);
+    border: none;
+    border-bottom: 1px solid var(--light-pink);
+    text-align: start;
+    color: var(--dark-purple);
+    font-family: 'WorkSans-SemiBold';
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.faq-question:hover{
+    color: var(--morado-claro);
+}
+
+.icon > img{
+    width: 25px;
+    height: 25px;
+}
+
+.faq-answer {
+    display: none; 
+    padding: 20px 0;
+    font-size: 16px;
+    color: var(--grayish-purple);
+}
+
+.faq-answer.active {
+    display: block; 
+}
+
+
+@media screen and (max-width:400px){
+    .faq{
+        width: 80%;
+    }
+
+    .fondo{
+        background-image: url('../assets/images/background-pattern-mobile.svg');
+        height: 200px;
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    .faq{
+        width: 70%;
+    }
+ 
+}
